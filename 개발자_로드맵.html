@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    max-width: 1024px;
+    margin-left: 400px;
+}
+
+.container {
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 1s ease, transform 2s ease;
+}
+
+.show-container {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.road {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 20px;
+    background-color: lightgray;
+}
+
+.dot {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.dot:hover {
+    transform: scale(1.2);
+}
+
+.content {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 10px;
+    color: black;
+    border: 1px solid black;
+    width: 600px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+ul {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 50px;
+            padding: 10px;
+            text-align: right;
+        }
+</style>
+</head>
+<body>
+<h1>개발자 로드맵</h1>
+<br><br><br>
+<div class="container">
+    <div class="road">
+        <div class="dot">
+            <div class="content">
+                <h2>kh교육원</h2>
+                <img src="../practice/로드맵사진/kh학원.png" class="small" width="400" height="200"> 
+            </div>
+            <h4>2023.02</h4>
+        </div>
+        <div class="dot">
+            <div class="content">
+                <h2>수료</h2>
+            </div>
+            <h4>2023.09</h4>
+        </div>
+        <div class="dot">
+            <div class="content">관련 자격증 취득 및 취업</div>
+            <h4>2024</h4>
+        </div>
+        <div class="dot">
+            <div class="content">공부</div>
+            <h4>2025</h4>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="road">
+        <div class="dot">
+            <div class="content">
+                <h2>op.gg 입사</h2>
+                <img src="../practice/로드맵사진/opgg.png" class="small" width="400" height="200">
+            </div> 
+            <h4>2026</h4>
+        </div>
+        <div class="dot">
+            <div class="content">잘 살기</div>
+            <h4>2027</h4>
+        </div>
+        <div class="dot">
+            <div class="content">열심히 살기</div>
+            <h4>2028</h4>
+        </div>
+        <div class="dot">
+            <div class="content">사업</div>
+            <h4>2029</h4>
+        </div>
+    </div>
+</div>
+
+<script>
+const container = document.querySelector('.container');
+
+setTimeout(() => {
+  container.classList.add('show-container');
+}, 1000);
+  
+const dots = document.querySelectorAll('.dot');
+
+dots.forEach(dot => {
+  const content = dot.querySelector('.content');
+  
+  dot.addEventListener('mouseenter', () => {
+    content.style.display = 'block';
+    setTimeout(() => {
+      content.style.opacity = 1;
+    }, 10);
+  });
+  
+  dot.addEventListener('mouseleave', () => {
+    content.style.opacity = 0;
+    setTimeout(() => {
+      content.style.display = 'none';
+    }, 500);
+  });
+});
+</script>
+
+<ul>
+    <li><a href="index.html">메인으로 돌아가기</a></li>
+</ul>
+
+</body>
+</html>

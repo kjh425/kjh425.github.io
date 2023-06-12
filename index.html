@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홈페이지</title>
+    <style>
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            animation: slide-in 2s ease-in-out;
+        }
+        
+        @keyframes slide-in {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0%);
+            }
+        }
+       @keyframes slide-in2{
+            0% {
+                transform: translateX(+100%);
+            }
+            100% {
+                transform: translateX(0%);
+            }
+       }
+
+        .text-animation {
+            text-align: center;
+            margin-top: 100px;
+            animation: slide-in2 1s ease-in-out;
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            animation: slide-in2 2s ease-in-out;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            animation: fade-in 2s ease-in-out;
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 0 16px;
+            
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            background-color: #333333;
+            padding: 16px;
+            justify-content: space-evenly;
+            
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-right: 32px;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: right;
+        }
+        li {
+            display: inline-block;
+        }
+        li a {
+            display: block;
+            color: #ffffff;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #666666;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <h1>준한's 홈페이지</h1>
+        <ul>
+            <li><a href="자기소개.html">자기소개 페이지</a></li>
+            <li><a href="여행.html">여행 페이지</a></li>
+            <li><a href="개발자_로드맵.html">개발자 로드맵</a></li>
+            <li><a href="회원가입.html">회원가입</a></li>
+        </ul>
+    </nav>
+
+    <div class="text-animation">
+        <h2>어서오세요</h2>
+    </div>
+
+    <div class="image-container">
+        <img src="../practice/제목 없음.png" alt="냥이">
+    </div>
+
+    
+</body>
+
+</html>
